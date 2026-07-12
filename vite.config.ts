@@ -13,7 +13,8 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
-    base: './',
+    // Project site: https://praylu.github.io/LuAnFu/
+    base: '/LuAnFu/',
     plugins: [react(), volcTtsPlugin()],
     server: {
       port: 3000,

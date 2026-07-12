@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { toPng } from 'html-to-image';
 import { speakText, stopTts, getTtsStatus } from './lib/tts';
 import { appAudio } from './lib/audio';
+import { asset } from './lib/asset';
 import {
   loadSave,
   writeSave,
@@ -127,7 +128,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '上古',
     title: '始教民育蚕',
     description: '《通鉴纲目·外记》记载："始教民育蚕，治丝茧以供衣服，而天下无皴瘃之患，后世祀为先蚕。"中华文明六千年的丝绸历史由此开篇，潞绸便源自这悠久的桑蚕文明。',
-    image: '/timeline-ancient.jpg',
+    image: asset('timeline-ancient.jpg'),
     hasSilkBall: false,
   },
   {
@@ -135,7 +136,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '宋代',
     title: '《清明上河图》潞紬店',
     description: '在北宋张择端的传世名画《清明上河图》上，虹桥之畔清晰可见"潞紬店"的招牌。潞绸作为当时顶级的丝织品，已是汴京繁华街市中的知名品牌。',
-    image: '/timeline-song.jpg',
+    image: asset('timeline-song.jpg'),
     hasSilkBall: true,
   },
   {
@@ -143,7 +144,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '明清',
     title: '御贡明清六百年',
     description: '潞绸自明代起成为皇家贡品，持续御贡明清两朝六百年。故宫坤宁宫东暖阁的婚床上，铺的便是潞绸被褥，从皇家走入百姓婚房，见证无数重要时刻。',
-    image: '/timeline-qing.jpg',
+    image: asset('timeline-qing.jpg'),
     hasSilkBall: false,
   },
   {
@@ -151,7 +152,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '1856',
     title: '慈禧与潞绸',
     description: '公元1856年，"懿嫔"慈禧喜得龙子（同治帝），喜讯传遍宫廷。潞绸作为当时最珍贵的丝织品，被用于庆贺这一皇家喜事，进一步奠定了其尊贵地位。',
-    image: '/timeline-cixi.jpg',
+    image: asset('timeline-cixi.jpg'),
     hasSilkBall: false,
   },
   {
@@ -159,7 +160,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '1958',
     title: '高平丝织印染厂建厂',
     description: '国家第二个五年计划期间，华北地区最大的丝织印染厂在高平南王庄合作社成立，后改组成为高平丝织厂，即今天的潞安府潞绸集团。开启了潞绸工业化生产的新篇章。',
-    image: '/timeline-1958.jpg',
+    image: asset('timeline-1958.jpg'),
     hasSilkBall: true,
   },
   {
@@ -167,7 +168,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '60s',
     title: '旷世织锦',
     description: '二十世纪六十年代末，高平丝织厂织造了《毛主席去安源》巨幅画像，用56904张手工纹版，以7把梭子带动21色丝线，构造经线2层、纬线7层，完全还原油画风采，已成绝版。',
-    image: '/timeline-1960s.jpg',
+    image: asset('timeline-1960s.jpg'),
     hasSilkBall: true,
   },
   {
@@ -175,7 +176,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '00s',
     title: '高档丝绸标志认证',
     description: '潞安府成为华北地区唯一入选国家首批"中国高档丝绸标志认证"的企业，标志着潞绸品质获得国家级认可。',
-    image: '/timeline-silkmark.jpg',
+    image: asset('timeline-silkmark.jpg'),
     hasSilkBall: false,
   },
   {
@@ -183,7 +184,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '2006',
     title: '新娘潞绸被诞生',
     description: '公司专注打造"最富中国文化寓意"的经典婚被——潞安府新娘潞绸被。被面采用国家级非遗潞绸，被胎选用太行山国家地理标志保护蚕茧，手工拉制，成为尊贵中国新娘的婚礼象征物。',
-    image: '/timeline-wedding.jpg',
+    image: asset('timeline-wedding.jpg'),
     hasSilkBall: false,
   },
   {
@@ -191,7 +192,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '2014',
     title: '国家级非物质文化遗产',
     description: '2014年11月，潞绸织造技艺入选"国家级非物质文化遗产"名录。这一传承六千年的古老技艺，得到了国家的最高级别保护与认可。',
-    image: '/timeline-2014.jpg',
+    image: asset('timeline-2014.jpg'),
     hasSilkBall: true,
   },
   {
@@ -199,7 +200,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '2015',
     title: '丝麻面料创新',
     description: '在潞绸非遗织造技艺基础上不断创新，推出国内首创的特色丝麻面料。集桑蚕丝的细腻柔软与大麻的粗犷质朴为一体，是"例外""玛丝菲尔""雅戈尔"等国内一线品牌的专供面料。',
-    image: '/timeline-silkhemp.jpg',
+    image: asset('timeline-silkhemp.jpg'),
     hasSilkBall: false,
   },
   {
@@ -207,7 +208,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '2019',
     title: '国家工业遗产',
     description: '潞绸文化园入选第三批国家工业遗产，成为集工业旅游、文化创意、参观体验、休闲购物为一体的综合性文化旅游园区。"炎帝陵——潞绸文化园"已成为游客休闲旅游的新线路。',
-    image: '/timeline-2019.jpg',
+    image: asset('timeline-2019.jpg'),
     hasSilkBall: false,
   },
   {
@@ -215,7 +216,7 @@ const timelineData: TimelineEvent[] = [
     shortLabel: '世界',
     title: '潞绸走向世界',
     description: '潞绸作为中华文明的使者，走进俄罗斯国家博物馆、法国巴黎名媛舞会、柬埔寨、迪拜、西班牙、意大利、英联邦成员国等。代表中国丝绸，在国际舞台上绽放光彩。',
-    image: '/timeline-global.jpg',
+    image: asset('timeline-global.jpg'),
     hasSilkBall: true,
   },
 ];
@@ -225,7 +226,7 @@ const storyScenes: StoryScene[] = [
     id: 's1',
     chapter: '第一梭',
     setting: '织造车间',
-    image: '/timeline-1960s.jpg',
+    image: asset('timeline-1960s.jpg'),
     narrative:
       '入职第一天，师傅带你走进织造车间。机杼声里，他指着墙上那幅巨作告诉你：当年织《毛主席去安源》，用了五万多张手工纹版、七把梭子与二十一色丝线。你忽然明白，潞绸人敬的，不只是漂亮的布。',
     question: '这份坚持，最贴近潞绸人的哪一种精神？',
@@ -242,7 +243,7 @@ const storyScenes: StoryScene[] = [
     id: 's2',
     chapter: '第二梭',
     setting: '婚被展厅',
-    image: '/timeline-wedding.jpg',
+    image: asset('timeline-wedding.jpg'),
     narrative:
       '一对新人来选婚被。导购轻轻展开被面，讲起太行山蚕茧与非遗织造。新娘问：「这床被，你们最想送给新人的，是一句什么话？」你刚想开口……',
     question: '新娘潞绸被的使命，应该怎么答？',
@@ -259,7 +260,7 @@ const storyScenes: StoryScene[] = [
     id: 's3',
     chapter: '第三梭',
     setting: '客户接待',
-    image: '/card-values.jpg',
+    image: asset('card-values.jpg'),
     narrative:
       '一位老客户远道而来，订单却临时改了规格。同事有些着急。老师傅递过茶，笑着说：「先听清楚对方的难处。」你看着这一幕，想起入职手册上的那句价值观。',
     question: '面对客户与同事，潞绸人应秉持？',
@@ -276,7 +277,7 @@ const storyScenes: StoryScene[] = [
     id: 's4',
     chapter: '第四梭',
     setting: '面料展区',
-    image: '/timeline-silkhemp.jpg',
+    image: asset('timeline-silkhemp.jpg'),
     narrative:
       '展台上，丝麻面料摸上去既细腻又有骨力。讲解员说，它供「例外」「玛丝菲尔」「雅戈尔」等品牌使用。有人问：非遗技艺为什么还要不断创新？',
     question: '面料业务最贴近的使命是？',
@@ -323,8 +324,8 @@ const mentors: Mentor[] = [
     id: 'weaver',
     title: '织造师傅',
     name: '机杼翁',
-    image: '/timeline-1960s.jpg',
-    avatar: '/mentor-weaver.png',
+    image: asset('timeline-1960s.jpg'),
+    avatar: asset('mentor-weaver.png'),
     trait: '匠心',
     blurb: '跟他学沉住气，把每一梭都走准',
     inscription: '机杼不歇，心细如丝。愿你下笔有力，落梭有准。',
@@ -347,8 +348,8 @@ const mentors: Mentor[] = [
     id: 'wedding',
     title: '婚被师傅',
     name: '传家娘',
-    image: '/timeline-wedding.jpg',
-    avatar: '/mentor-wedding.png',
+    image: asset('timeline-wedding.jpg'),
+    avatar: asset('mentor-wedding.png'),
     trait: '传家',
     blurb: '跟她学心意，把祝福织进被里',
     inscription: '传家有礼，忠爱为凭。愿你待人以诚，做事以恒。',
@@ -371,8 +372,8 @@ const mentors: Mentor[] = [
     id: 'fabric',
     title: '面料师傅',
     name: '新织手',
-    image: '/timeline-silkhemp.jpg',
-    avatar: '/mentor-fabric.png',
+    image: asset('timeline-silkhemp.jpg'),
+    avatar: asset('mentor-fabric.png'),
     trait: '创新',
     blurb: '跟他学破局，让古法长出新枝',
     inscription: '古法新织，相伴客户。愿你敢创新，也守得住根。',
@@ -395,8 +396,8 @@ const mentors: Mentor[] = [
     id: 'story',
     title: '讲述师傅',
     name: '说书人',
-    image: '/timeline-global.jpg',
-    avatar: '/mentor-story.png',
+    image: asset('timeline-global.jpg'),
+    avatar: asset('mentor-story.png'),
     trait: '文化',
     blurb: '跟她学开口，把潞绸讲给世界听',
     inscription: '丝路有声，故事有光。愿你开口有情，行走有向。',
@@ -704,7 +705,7 @@ function NameInputModal({ onSubmit, onSkip }: { onSubmit: (name: string) => void
     <div className="absolute inset-0 z-50 modal-overlay flex items-center justify-center p-6">
       <div ref={modalRef} className="rounded-2xl p-8 max-w-[340px] w-full text-center" style={{ background: '#fff' }}>
         <div className="w-24 h-auto mx-auto mb-4 rounded-lg overflow-hidden" style={{ boxShadow: '0 2px 10px rgba(42,87,68,0.1)' }}>
-          <img src="/logo-luanfu.png" alt="潞安府潞绸" className="w-full h-full object-contain" />
+          <img src={asset('logo-luanfu.png')} alt="潞安府潞绸" className="w-full h-full object-contain" />
         </div>
         <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-green)' }}>
           欢迎加入潞安府
@@ -871,7 +872,7 @@ function WelcomePage({
   return (
     <div className="w-full h-full relative overflow-hidden">
       <div className="welcome-hero">
-        <img src="/card-history.jpg" alt="" />
+        <img src={asset('card-history.jpg')} alt="" />
         <div className="welcome-scrim" />
       </div>
       <div className="welcome-thread" />
@@ -880,7 +881,7 @@ function WelcomePage({
         <div className="relative z-10 h-full flex flex-col justify-end px-7 pb-14 pt-10">
           <div className="mb-auto pt-6">
             <img
-              src="/logo-luanfu.png"
+              src={asset('logo-luanfu.png')}
               alt="潞安府"
               className="w-16 h-auto rounded-md opacity-95"
               style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
@@ -1019,7 +1020,7 @@ function LevelSelectPage({
       metaphor: '抽丝',
       title: '探寻历史',
       subtitle: '回收第一问 · 机上的呼吸',
-      image: '/card-history.jpg',
+      image: asset('card-history.jpg'),
       desc: '横滑长卷，去听丝绸在岁月里的呼吸——答案，就在经纬之间',
     },
     {
@@ -1027,7 +1028,7 @@ function LevelSelectPage({
       metaphor: '穿梭',
       title: '遴选知音',
       subtitle: '回收第二问 · 为何是潞绸',
-      image: '/card-values.jpg',
+      image: asset('card-values.jpg'),
       desc: '走进四个情景，把心对准经线——忠爱与匠心，会自己说话',
     },
     {
@@ -1035,7 +1036,7 @@ function LevelSelectPage({
       metaphor: '织成',
       title: '织梦未来',
       subtitle: '回收第三问 · 你的一梭',
-      image: '/card-future.jpg',
+      image: asset('card-future.jpg'),
       desc: '抽三支丝签。不是算命——是你愿意成为怎样的潞绸人',
     },
   ];
@@ -1045,7 +1046,7 @@ function LevelSelectPage({
   return (
     <div className="w-full h-full flex flex-col relative overflow-hidden" style={{ background: 'var(--color-bg)' }}>
       <div className="absolute inset-0 opacity-20">
-        <img src="/bg-rice-paper.jpg" alt="" className="w-full h-full object-cover" />
+        <img src={asset('bg-rice-paper.jpg')} alt="" className="w-full h-full object-cover" />
       </div>
 
       <div className="relative z-10 flex flex-col h-full">
@@ -1308,7 +1309,7 @@ function Level1Timeline({
                       animation: 'silkBounce 2.2s ease-in-out infinite',
                     }}
                   >
-                    <img src="/silk-ball.png" alt="" className="w-6 h-6 object-contain" />
+                    <img src={asset('silk-ball.png')} alt="" className="w-6 h-6 object-contain" />
                     收取金线
                   </button>
                 )}
@@ -1721,7 +1722,7 @@ function Level3Future({
   return (
     <div className="w-full h-full flex flex-col relative overflow-hidden" style={{ background: '#0F1412' }}>
       <div className="absolute inset-0">
-        <img src="/card-future.jpg" alt="" className="w-full h-full object-cover opacity-55" />
+        <img src={asset('card-future.jpg')} alt="" className="w-full h-full object-cover opacity-55" />
         <div
           className="absolute inset-0"
           style={{
@@ -2019,7 +2020,7 @@ function CelebrationPage({
   return (
     <div className="w-full h-full relative overflow-hidden" style={{ background: '#0F1412' }}>
       <div className="absolute inset-0 opacity-35">
-        <img src="/bg-rice-paper.jpg" alt="" className="w-full h-full object-cover" />
+        <img src={asset('bg-rice-paper.jpg')} alt="" className="w-full h-full object-cover" />
       </div>
       <div
         className="absolute inset-0"
@@ -2078,7 +2079,7 @@ function CelebrationPage({
                   <div className="silk-color-frame" aria-hidden />
 
                   <div className="scroll-fabric-inner">
-                    <img src="/logo-luanfu.png" alt="潞安府" className="w-12 h-auto mx-auto mb-3 rounded" />
+                    <img src={asset('logo-luanfu.png')} alt="潞安府" className="w-12 h-auto mx-auto mb-3 rounded" />
 
                     <p className="text-[10px] tracking-[0.35em] mb-1.5 text-center" style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-serif)' }}>
                       出师礼 · 入职锦卷
